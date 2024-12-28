@@ -1,0 +1,16 @@
+name: GitActions Demon1
+on: push
+jobs:
+  GitActions-demo-job:
+    name: Demo Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print an environment
+        env:
+          MY_VAR: Hello, world! My name is
+          FIRST_NAME: Jaehyeok
+          LAST_NAME: Kim
+          ENGLISH_NAME: Ethan.Kim
+        run: |
+          echo $MY_VAR $FIRST_NAME $LAST_NAME.
+          echo $MY_VAR $ENGLISH_NAME.
